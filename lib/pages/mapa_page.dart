@@ -64,8 +64,7 @@ class _MapaPageState extends State<MapaPage> {
       onCameraMove: (cameraPosition) {
         // cameraPosition.target = LatLng central del mapa
         mapaBloc.add(OnMovioMapa(cameraPosition.target));
-      },
-      
+      },     
     );
   }
 }
