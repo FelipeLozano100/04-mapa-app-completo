@@ -8,6 +8,7 @@ import 'package:mapa_app/bloc/mapa/mapa_bloc.dart';
 
 import 'package:mapa_app/pages/loading_page.dart';
 import 'package:mapa_app/pages/mapa_page.dart';
+import 'package:mapa_app/pages/test_marker_page.dart';
  
 void main() => runApp(MyApp());
  
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         title: 'Material App',
         debugShowCheckedModeBanner: false,
         home: LoadingPage(),
+        // home: TestMarkerPage(),
         routes: {
           'mapa'      : ( _ ) => MapaPage(),
           'loading'   : ( _ ) => LoadingPage(),

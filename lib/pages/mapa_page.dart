@@ -63,6 +63,8 @@ class _MapaPageState extends State<MapaPage> {
         target: LatLng(state.ubicacion.latitude, state.ubicacion.longitude),
         zoom: 15);
 
+
+
     return BlocBuilder<MapaBloc, MapaState>(
       builder: (context, _) {
         return GoogleMap(
@@ -72,6 +74,7 @@ class _MapaPageState extends State<MapaPage> {
           zoomControlsEnabled: false,
           onMapCreated: mapaBloc.initMapa,
           polylines: mapaBloc.state.polylines.values.toSet(),
+          markers: mapaBloc.state.markers.values.toSet(),
           onCameraMove: (cameraPosition) {
             // cameraPosition.target = LatLng central del mapa
             mapaBloc.add(OnMovioMapa(cameraPosition.target));
